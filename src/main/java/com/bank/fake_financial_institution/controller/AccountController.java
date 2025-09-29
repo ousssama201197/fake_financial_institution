@@ -1,9 +1,7 @@
 package com.bank.fake_financial_institution.controller;
 
 import com.bank.fake_financial_institution.dto.AccountDTO;
-import com.bank.fake_financial_institution.dto.CustomerDTO;
 import com.bank.fake_financial_institution.service.AccountService;
-import com.bank.fake_financial_institution.service.CustomerService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;

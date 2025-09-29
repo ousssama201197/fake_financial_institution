@@ -6,7 +6,6 @@ import com.bank.fake_financial_institution.entity.AccountTransaction;
 import com.bank.fake_financial_institution.entity.TransactionDirection;
 import com.bank.fake_financial_institution.repository.AccountRepository;
 import com.bank.fake_financial_institution.repository.AccountTransactionRepository;
-import com.bank.fake_financial_institution.repository.CustomerRepository;
 import com.bank.fake_financial_institution.service.TransferService;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;

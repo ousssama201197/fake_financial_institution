@@ -1,7 +1,6 @@
 package com.bank.fake_financial_institution.dto;
 
 import com.bank.fake_financial_institution.entity.Account;
-import com.bank.fake_financial_institution.entity.AccountTransaction;
 import com.bank.fake_financial_institution.entity.TransactionDirection;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.JoinColumn;

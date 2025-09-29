@@ -1,7 +1,6 @@
 package com.bank.fake_financial_institution.repository;
 
 import com.bank.fake_financial_institution.entity.Currency;
-import com.bank.fake_financial_institution.entity.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
