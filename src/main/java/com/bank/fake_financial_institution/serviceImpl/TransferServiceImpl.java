@@ -28,6 +28,10 @@ public class TransferServiceImpl implements TransferService {
 
     @Override
     @Transactional
+    /**
+     * All operations in this method are executed within a single transaction.
+     * If any exception occurs,for example exception thrown when saving new balance for creditor account (line : 57),all previous operations will be rolled back.
+     */
     public TransferDTO create(TransferDTO transferDTO) {
 
         Account debitorAccount = accountRepository.findByAccountNumber(transferDTO.getCreditAccountNumber()).

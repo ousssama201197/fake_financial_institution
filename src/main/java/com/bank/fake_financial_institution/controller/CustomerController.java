@@ -22,12 +22,6 @@ public class CustomerController {
         this.customerService = customerService;
     }
 
-    /**
-     * Get all customers with pagination
-     *
-     * @param pageable
-     * @return
-     */
     @GetMapping
     @Operation(summary = "Get all customers with pagination")
     public ResponseEntity<Page<CustomerDTO>> getAllCustomers(Pageable pageable) {
@@ -35,12 +29,6 @@ public class CustomerController {
         return ResponseEntity.ok(customers);
     }
 
-    /**
-     * Get customer detail by customer number
-     *
-     * @param customerNumber
-     * @return
-     */
     @GetMapping("/{customerNumber}")
     @Operation(summary = "Get customer detail by customer number")
     public ResponseEntity<CustomerDTO> getCustomerDetail(@PathVariable String customerNumber) {
@@ -48,12 +36,6 @@ public class CustomerController {
         return ResponseEntity.ok(customer);
     }
 
-    /**
-     * Create a new customer
-     *
-     * @param customerDTO
-     * @return
-     */
     @PostMapping
     @Operation(summary = "Create a new customer")
     @ApiResponses(value = {
