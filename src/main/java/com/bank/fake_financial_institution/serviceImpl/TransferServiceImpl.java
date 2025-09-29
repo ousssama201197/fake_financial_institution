@@ -25,12 +25,17 @@ public class TransferServiceImpl implements TransferService {
         this.accountTransactionRepository = accountTransactionRepository;
     }
 
-    @Override
-    @Transactional
     /**
      * All operations in this method are executed within a single transaction.
      * If any exception occurs,for example exception thrown when saving new balance for creditor account (line : 57),all previous operations will be rolled back.
+     *
+     * @param transferDTO
+     * @return TransferDTO
+     * @throws EntityNotFoundException  if either the debitor or creditor account is not found
+     * @throws IllegalArgumentException if the debitor account has insufficient funds
      */
+    @Override
+    @Transactional
     public TransferDTO create(TransferDTO transferDTO) {
 
         Account debitorAccount = accountRepository.findByAccountNumber(transferDTO.getCreditAccountNumber()).
