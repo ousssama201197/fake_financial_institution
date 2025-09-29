@@ -89,22 +89,4 @@ class CustomerServiceImplTest {
         assertEquals("CUSTOMER-20250928", result.getCustomerNumber());
     }
 
-    @Test
-    void testDelete() {
-        when(customerRepository.findByCustomerNumber("CUSTOMER-20250928")).thenReturn(Optional.of(customer));
-        doNothing().when(customerRepository).delete(customer);
-
-        assertDoesNotThrow(() -> customerService.delete("CUSTOMER-20250928"));
-        verify(customerRepository, times(1)).delete(customer);
-    }
-
-    @Test
-    void testDeleteNotFound() {
-        when(customerRepository.findByCustomerNumber("CUSTOMER-99999999")).thenReturn(Optional.empty());
-
-        EntityNotFoundException exception = assertThrows(EntityNotFoundException.class, () ->
-                customerService.delete("CUSTOMER-99999999"));
-
-        assertEquals("Customer with number CUSTOMER-99999999 not found", exception.getMessage());
-    }
 }

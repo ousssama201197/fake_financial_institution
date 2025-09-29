@@ -51,7 +51,7 @@ class TransferServiceImplTest {
         transferDTO.setAmount(BigDecimal.valueOf(200));
         transferDTO.setDebitAccountNumber("ACC002");
         transferDTO.setCreditAccountNumber("ACC001");
-        transferDTO.setPurpose("Payment");
+        transferDTO.setPurpose("Paiement facture");
     }
 
     @Test

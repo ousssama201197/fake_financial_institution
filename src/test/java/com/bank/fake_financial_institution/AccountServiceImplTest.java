@@ -72,7 +72,7 @@ class AccountServiceImplTest {
         CurrencyDTO currencyDTO = new CurrencyDTO();
         currencyDTO.setCode("DZD");
 
-        accountDTO = new AccountDTO("ACC001", "US00BANK123456789", BigDecimal.valueOf(1000), customerDTO, currencyDTO);
+        accountDTO = new AccountDTO("ACC001", "00200112112300000146", BigDecimal.valueOf(1000), customerDTO, currencyDTO);
     }
 
     @Test
